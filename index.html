@@ -728,19 +728,18 @@ var rlArgs = {"script":"swipebox","selector":"light-box","customEvents":"","acti
                   </style>
                 </head>
                 <body>
-                  <script>
-                    if ('serviceWorker' in navigator) {
-                      window.addEventListener('load', () => {
-                        navigator.serviceWorker.register('/service-worker.js')
-                          .then(registration => {
-                            console.log('Service Worker registered with scope:', registration.scope);
-                          })
-                          .catch(error => {
-                            console.log('Service Worker registration failed:', error);
-                          });
-                      });
-                    }
-                  </script>
+                    <script>
+                        if ('serviceWorker' in navigator) {
+                          navigator.serviceWorker.register('/service-worker.js')
+                            .then(function (reg) {
+                              console.log('Service worker registered ✅', reg);
+                            })
+                            .catch(function (err) {
+                              console.log('Service worker registration failed ❌', err);
+                            });
+                        }
+                      </script>
+                      
                   
                   <audio id="click-sound" src="click.mp3" preload="auto"></audio>
                   <audio id="milestone-sound" src="milestone.mp3" preload="auto"></audio>
