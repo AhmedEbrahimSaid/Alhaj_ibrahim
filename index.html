@@ -64,13 +64,16 @@
         .section-block {
             padding: 50px 20px; }
 
-        #sec-1 {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://d.top4top.io/p_3386b4fsk1.jpg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center; }
+            #sec-1 {
+         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/up.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         }
+
         #sec-1 .logo {
             text-align: center;
             margin-bottom: 20px;
@@ -488,13 +491,15 @@ var rlArgs = {"script":"swipebox","selector":"light-box","customEvents":"","acti
         <div class="text-center">
             <div class="sec-desc">
                 <h3>إذاعة القرآن الكريم صدقة عن المغفور له بإذن اللَّه تـعـالي الحاج إبراهيم سعيد أحمد</h3>
-            </div>
-            <div class="image">
-                <img src="https://b.top4top.io/p_25912ckig1.jpg" style="max-width:100%;width: 350px">
-            </div>
-            <div class="audio">
-                <audio controls>
-                    <source src="https://stream.radiojar.com/8s5u5tpdtwzuv">
+                <div class="image">
+                    <img src="img/radio.png" style="max-width:100%; width: 350px" alt="Radio">
+                </div>
+                <div class="audio">
+                    <audio controls>
+                        <source src="https://stream.radiojar.com/8s5u5tpdtwzuv" />
+                    </audio>
+                </div>
+                
                 </audio>
             </div>
         </div>
@@ -596,304 +601,304 @@ var rlArgs = {"script":"swipebox","selector":"light-box","customEvents":"","acti
                 <h3>السبحة الالكترونية صدقة عن المغفور له بإذن اللَّه تـعـالي الحاج إبراهيم سعيد أحمد</h3>
 
                 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>مسبحة إلكترونية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f7f7f7;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .item {
-      background-color: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 20px;
-      padding: 30px;
-      flex: 1 1 300px;
-      max-width: 360px;
-      min-width: 260px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 140px;
-    }
-
-    .item:hover {
-      transform: scale(1.02);
-    }
-
-    .counter {
-      font-size: 30px;
-      margin: 10px 0;
-      font-weight: bold;
-      color: #ff0000;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .counter.animate {
-      animation: pulse 0.3s ease-in-out;
-    }
-
-    @keyframes pulse {
-      0% { color: #ff0000; }
-      50% { color: #4caf50; }
-      100% { color: #ff0000; }
-    }
-
-    .counter-btn, .reset-btn, #reset-all {
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      margin: 5px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .reset-btn, #reset-all {
-      background-color: #e53935;
-    }
-
-    .total-counter {
-      margin-top: 30px;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .message-text {
-      margin-top: 10px;
-      background: #f1f8e9;
-      padding: 8px 12px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: bold;
-      color: #388e3c;
-      text-align: center;
-    }
-
-    .date-label {
-      font-size: 11px;
-      color: #888;
-      font-style: italic;
-      margin-top: 5px;
-      min-height: 20px;
-    }
-
-    .daily-counter {
-      font-size: 13px;
-      color: #0277bd;
-      margin-top: 5px;
-    }
-
-    .small-text {
-  font-size: 9px !important;
-  line-height: 1.3;
-}
-
-  </style>
-</head>
-<body><script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then(registration => {
-            console.log('Service Worker registered with scope:', registration.scope);
-          })
-          .catch(error => {
-            console.log('Service Worker registration failed:', error);
-          });
-      });
-    }
-  </script>
-  
-
-<audio id="click-sound" src="click.mp3" preload="auto"></audio>
-<audio id="milestone-sound" src="milestone.mp3" preload="auto"></audio>
-
-<h2>🌙 مسبحة إلكترونية</h2>
-
-<div class="row" id="tasbih-container"></div>
-
-<div class="total-counter">
-  <h4>الإجمالي: <span id="total-count">0</span></h4>
-  <h5>إجمالي اليوم: <span id="daily-total">0</span></h5>
-  <button id="reset-all">🔁 إعادة تصفير الكل</button>
-</div>
-
-<script>
-  const azkar = [
-    "سبحان الله",
-    "الحمد لله",
-    "لا اله الا الله",
-    "الله اكبر",
-    "سبحان الله وبحمده سبحان الله العظيم",
-    "سبحان الله والحمد لله ولا إله إلا الله والله أكبر",
-    "اللهم صل على سيدنا محمد",
-    "استغفر الله العظيم"
-  ];
-
-  const counts = JSON.parse(localStorage.getItem("counts")) || {};
-  const dailyKey = `daily-${new Date().toISOString().split('T')[0]}`;
-  const dailyCounts = JSON.parse(localStorage.getItem(dailyKey)) || {};
-  const clickSound = document.getElementById("click-sound");
-  const milestoneSound = document.getElementById("milestone-sound");
-
-  function saveCounts() {
-    localStorage.setItem("counts", JSON.stringify(counts));
-    localStorage.setItem(dailyKey, JSON.stringify(dailyCounts));
-  }
-
-  function updateTotals() {
-    const total = Object.values(counts).reduce((a, b) => a + b, 0);
-    const dailyTotal = Object.values(dailyCounts).reduce((a, b) => a + b, 0);
-    document.getElementById("total-count").textContent = total;
-    document.getElementById("daily-total").textContent = dailyTotal;
-  }
-
-  function renderItems() {
-    const container = document.getElementById("tasbih-container");
-    container.innerHTML = "";
-
-    azkar.forEach(zekr => {
-      const count = counts[zekr] || 0;
-      const daily = dailyCounts[zekr] || 0;
-      const item = document.createElement("div");
-      item.className = "item";
-
-      const counterDiv = document.createElement("div");
-      counterDiv.className = "counter";
-      counterDiv.textContent = count;
-
-      const dailyDiv = document.createElement("div");
-      dailyDiv.className = "daily-counter";
-      dailyDiv.textContent = `اليومي: ${daily}`;
-
-      const messageDiv = document.createElement("div");
-      messageDiv.className = "message-text";
-      messageDiv.innerHTML = `✅ وصلت لـ <strong>${count}</strong> (${zekr})`;
-     if (zekr.length > 20) {
-     messageDiv.classList.add("small-text");
-     }
-     if (zekr.length > 25) messageDiv.classList.add("small-text");
-
-      const dateLabel = document.createElement("div");
-      dateLabel.className = "date-label";
-      const savedDate = localStorage.getItem(`lastDate-${zekr}`);
-      dateLabel.textContent = savedDate ? `آخر تسجيل: ${savedDate}` : "لا يوجد تسجيل بعد";
-
-      const btn = document.createElement("button");
-      btn.className = "counter-btn";
-      btn.textContent = zekr;
-      if (zekr.length > 25) btn.classList.add("small-text");
-
-      btn.onclick = () => {
-        clickSound.play();
-        counts[zekr] = (counts[zekr] || 0) + 1;
-        dailyCounts[zekr] = (dailyCounts[zekr] || 0) + 1;
-
-        const now = new Date().toLocaleString('ar-EG');
-        localStorage.setItem(`lastDate-${zekr}`, now);
-
-        saveCounts();
-
-        counterDiv.textContent = counts[zekr];
-        dailyDiv.textContent = `اليومي: ${dailyCounts[zekr]}`;
-        messageDiv.innerHTML = `✅ وصلت لـ <strong>${counts[zekr]}</strong> (${zekr})`;
-     if (zekr.length > 20) {
-     messageDiv.classList.add("small-text");
-     } else {
-     messageDiv.classList.remove("small-text");
-     }
-        if (zekr.length > 25) messageDiv.classList.add("small-text");
-
-        counterDiv.classList.add("animate");
-        setTimeout(() => counterDiv.classList.remove("animate"), 300);
-
-        dateLabel.textContent = `آخر تسجيل: ${now}`;
-        updateTotals();
-
-        if (counts[zekr] % 100 === 0) {
-          milestoneSound.play();
-          showNotification("🌟 تهنئة", `${zekr} وصلت لـ ${counts[zekr]} مرة!`);
-        }
-
-        if (counts[zekr] >= 1000 && counts[zekr] % 1000 === 0) {
-          alert(`🎉 مبارك! وصلت إلى ${counts[zekr]} من ${zekr}`);
-        }
-      };
-
-      const resetBtn = document.createElement("button");
-      resetBtn.className = "reset-btn";
-      resetBtn.textContent = "تصفير";
-      resetBtn.onclick = () => {
-        counts[zekr] = 0;
-        delete dailyCounts[zekr];
-        localStorage.removeItem(`lastDate-${zekr}`);
-        saveCounts();
-        counterDiv.textContent = "0";
-        dailyDiv.textContent = "اليومي: 0";
-        dateLabel.textContent = "لا يوجد تسجيل بعد";
-        messageDiv.innerHTML = `✅ وصلت لـ <strong>0</strong> (${zekr})`;
-        if (zekr.length > 25) messageDiv.classList.add("small-text");
-        updateTotals();
-      };
-
-      item.appendChild(counterDiv);
-      item.appendChild(btn);
-      item.appendChild(resetBtn);
-      item.appendChild(dailyDiv);
-      item.appendChild(dateLabel);
-      item.appendChild(messageDiv);
-      container.appendChild(item);
-    });
-
-    updateTotals();
-  }
-
-  document.getElementById("reset-all").onclick = () => {
-    azkar.forEach(zekr => {
-      counts[zekr] = 0;
-      delete dailyCounts[zekr];
-      localStorage.removeItem(`lastDate-${zekr}`);
-    });
-    saveCounts();
-    renderItems();
-  };
-
-  function showNotification(title, body) {
-    if (Notification.permission === "granted") {
-      new Notification(title, { body });
-    }
-  }
-
-  if (Notification.permission !== "granted") {
-    Notification.requestPermission();
-  }
-
-  renderItems();
-</script>
-
-</body>
-</html>
+                <html lang="ar" dir="rtl">
+                <head>
+                  <meta charset="UTF-8">
+                  <title>مسبحة إلكترونية</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <style>
+                    body {
+                      font-family: 'Tahoma', sans-serif;
+                      background-color: #f7f7f7;
+                      text-align: center;
+                      padding: 20px;
+                    }
+                
+                    .row {
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: center;
+                      gap: 20px;
+                    }
+                
+                    .item {
+                      background-color: #fff;
+                      border: 1px solid #e0e0e0;
+                      border-radius: 20px;
+                      padding: 30px;
+                      flex: 1 1 300px;
+                      max-width: 360px;
+                      min-width: 260px;
+                      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+                      transition: transform 0.2s ease;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      min-height: 140px;
+                    }
+                
+                    .item:hover {
+                      transform: scale(1.02);
+                    }
+                
+                    .counter {
+                      font-size: 30px;
+                      margin: 10px 0;
+                      font-weight: bold;
+                      color: #ff0000;
+                      background-color: #fff;
+                      border: 1px solid #ddd;
+                      padding: 10px;
+                      border-radius: 10px;
+                      transition: transform 0.3s ease;
+                    }
+                
+                    .counter.animate {
+                      animation: pulse 0.3s ease-in-out;
+                    }
+                
+                    @keyframes pulse {
+                      0% { color: #ff0000; }
+                      50% { color: #4caf50; }
+                      100% { color: #ff0000; }
+                    }
+                
+                    .counter-btn, .reset-btn, #reset-all {
+                      background-color: #4caf50;
+                      color: white;
+                      border: none;
+                      padding: 16px;
+                      margin: 5px;
+                      border-radius: 50%;  /* تعديل الشكل ليكون دائري */
+                      cursor: pointer;
+                      font-size: 16px;
+                      width: 70px;  /* جعل الزر دائري */
+                      height: 70px;  /* جعل الزر دائري */
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                      transition: background-color 0.3s, transform 0.2s;
+                    }
+                
+                    .counter-btn:hover {
+                      background-color: #45a049;
+                      transform: scale(1.1);
+                    }
+                
+                    .reset-btn, #reset-all {
+                      background-color: #e53935;
+                    }
+                
+                    .total-counter {
+                      margin-top: 30px;
+                      font-size: 18px;
+                      color: #333;
+                    }
+                
+                    .message-text {
+                      margin-top: 10px;
+                      background: #f1f8e9;
+                      padding: 8px 12px;
+                      border-radius: 10px;
+                      font-size: 14px;
+                      font-weight: bold;
+                      color: #388e3c;
+                      text-align: center;
+                    }
+                
+                    .date-label {
+                      font-size: 11px;
+                      color: #888;
+                      font-style: italic;
+                      margin-top: 5px;
+                      min-height: 20px;
+                    }
+                
+                    .daily-counter {
+                      font-size: 13px;
+                      color: #0277bd;
+                      margin-top: 5px;
+                    }
+                
+                    .small-text {
+                      font-size: 9px !important;
+                      line-height: 1.3;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <script>
+                    if ('serviceWorker' in navigator) {
+                      window.addEventListener('load', () => {
+                        navigator.serviceWorker.register('/service-worker.js')
+                          .then(registration => {
+                            console.log('Service Worker registered with scope:', registration.scope);
+                          })
+                          .catch(error => {
+                            console.log('Service Worker registration failed:', error);
+                          });
+                      });
+                    }
+                  </script>
+                  
+                  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+                  <audio id="milestone-sound" src="milestone.mp3" preload="auto"></audio>
+                
+                  <h2>عند كل 100 تسبيحه برسل لك تذكير بالصلاة علي نبينا سيدنا محمد ﷺ </h2>
+                
+                  <div class="row" id="tasbih-container"></div>
+                
+                  <div class="total-counter">
+                    <h4>الإجمالي: <span id="total-count">0</span></h4>
+                    <h5>إجمالي اليوم: <span id="daily-total">0</span></h5>
+                    <button id="reset-all">🔁 إعادة تصفير الكل</button>
+                  </div>
+                
+                  <script>
+                    const azkar = [
+                      "سبحان الله",
+                      "الحمد لله",
+                      "لا اله الا الله",
+                      "الله اكبر",
+                      "سبحان الله وبحمده سبحان الله العظيم",
+                      "سبحان الله والحمد لله ولا إله إلا الله والله أكبر",
+                      "اللهم صل على سيدنا محمد",
+                      "استغفر الله العظيم"
+                    ];
+                
+                    const counts = JSON.parse(localStorage.getItem("counts")) || {};
+                    const dailyKey = `daily-${new Date().toISOString().split('T')[0]}`;
+                    const dailyCounts = JSON.parse(localStorage.getItem(dailyKey)) || {};
+                    const clickSound = document.getElementById("click-sound");
+                    const milestoneSound = document.getElementById("milestone-sound");
+                
+                    function saveCounts() {
+                      localStorage.setItem("counts", JSON.stringify(counts));
+                      localStorage.setItem(dailyKey, JSON.stringify(dailyCounts));
+                    }
+                
+                    function updateTotals() {
+                      const total = Object.values(counts).reduce((a, b) => a + b, 0);
+                      const dailyTotal = Object.values(dailyCounts).reduce((a, b) => a + b, 0);
+                      document.getElementById("total-count").textContent = total;
+                      document.getElementById("daily-total").textContent = dailyTotal;
+                    }
+                
+                    function renderItems() {
+                      const container = document.getElementById("tasbih-container");
+                      container.innerHTML = "";
+                
+                      azkar.forEach(zekr => {
+                        const count = counts[zekr] || 0;
+                        const daily = dailyCounts[zekr] || 0;
+                        const item = document.createElement("div");
+                        item.className = "item";
+                
+                        const counterDiv = document.createElement("div");
+                        counterDiv.className = "counter";
+                        counterDiv.textContent = count;
+                
+                        const dailyDiv = document.createElement("div");
+                        dailyDiv.className = "daily-counter";
+                        dailyDiv.textContent = `اليومي: ${daily}`;
+                
+                        const messageDiv = document.createElement("div");
+                        messageDiv.className = "message-text";
+                        messageDiv.innerHTML = `✅ وصلت لـ <strong>${count}</strong> (${zekr})`;
+                
+                        const dateLabel = document.createElement("div");
+                        dateLabel.className = "date-label";
+                        const savedDate = localStorage.getItem(`lastDate-${zekr}`);
+                        dateLabel.textContent = savedDate ? `آخر تسجيل: ${savedDate}` : "لا يوجد تسجيل بعد";
+                
+                        const btn = document.createElement("button");
+                        btn.className = "counter-btn";
+                        btn.textContent = zekr;
+                
+                        btn.onclick = () => {
+                          clickSound.play();
+                          counts[zekr] = (counts[zekr] || 0) + 1;
+                          dailyCounts[zekr] = (dailyCounts[zekr] || 0) + 1;
+                
+                          const now = new Date().toLocaleString('ar-EG');
+                          localStorage.setItem(`lastDate-${zekr}`, now);
+                
+                          saveCounts();
+                
+                          counterDiv.textContent = counts[zekr];
+                          dailyDiv.textContent = `اليومي: ${dailyCounts[zekr]}`;
+                          messageDiv.innerHTML = `✅ وصلت لـ <strong>${counts[zekr]}</strong> (${zekr})`;
+                
+                          counterDiv.classList.add("animate");
+                          setTimeout(() => counterDiv.classList.remove("animate"), 300);
+                
+                          dateLabel.textContent = `آخر تسجيل: ${now}`;
+                          updateTotals();
+                
+                          if (counts[zekr] % 100 === 0) {
+                            milestoneSound.play();
+                            showNotification("🌟 تهنئة", `${zekr} وصلت لـ ${counts[zekr]} مرة!`);
+                          }
+                
+                          if (counts[zekr] >= 1000 && counts[zekr] % 1000 === 0) {
+                            alert(`🎉 مبارك! وصلت إلى ${counts[zekr]} من ${zekr}`);
+                          }
+                        };
+                
+                        const resetBtn = document.createElement("button");
+                        resetBtn.className = "reset-btn";
+                        resetBtn.textContent = "تصفير";
+                        resetBtn.onclick = () => {
+                          counts[zekr] = 0;
+                          delete dailyCounts[zekr];
+                          localStorage.removeItem(`lastDate-${zekr}`);
+                          saveCounts();
+                          counterDiv.textContent = "0";
+                          dailyDiv.textContent = "اليومي: 0";
+                          dateLabel.textContent = "لا يوجد تسجيل بعد";
+                          messageDiv.innerHTML = `✅ وصلت لـ <strong>0</strong> (${zekr})`;
+                          updateTotals();
+                        };
+                
+                        item.appendChild(counterDiv);
+                        item.appendChild(btn);
+                        item.appendChild(resetBtn);
+                        item.appendChild(dailyDiv);
+                        item.appendChild(dateLabel);
+                        item.appendChild(messageDiv);
+                        container.appendChild(item);
+                      });
+                
+                      updateTotals();
+                    }
+                
+                    document.getElementById("reset-all").onclick = () => {
+                      azkar.forEach(zekr => {
+                        counts[zekr] = 0;
+                        delete dailyCounts[zekr];
+                        localStorage.removeItem(`lastDate-${zekr}`);
+                      });
+                      saveCounts();
+                      renderItems();
+                    };
+                
+                    function showNotification(title, body) {
+                      if (Notification.permission === "granted") {
+                        new Notification(title, { body });
+                      }
+                    }
+                
+                    if (Notification.permission !== "granted") {
+                      Notification.requestPermission();
+                    }
+                
+                    renderItems();
+                  </script>
+                
+                </body>
+                </html>
+                
 
 <section id="sec-contact" class="section-block">
     <div class="container">

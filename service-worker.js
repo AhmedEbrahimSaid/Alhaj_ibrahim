@@ -5,8 +5,8 @@ const assets = [
   "/style.css",
   "/script.js",
   "/manifest.json",
-  "/path/to/icon-192x192.png",
-  "/path/to/icon-512x512.png"
+  "/icons/icon-192x192.png", // تعديل المسار
+  "/icons/icon-512x512.png", // تعديل المسار
 ];
 
 // التثبيت
