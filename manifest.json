@@ -1,7 +1,7 @@
 {
-  "name": "اصدقة جارية - الحاج إبراهيم سعيد",
-  "short_name": "صدقة جارية",
-  "description": "تطبيق صدقة جارية لمساعدة المحتاجين",
+  "name": "Alhaj_ibrahim",
+  "short_name": "Alhaj_ibrahim",
+  "description": "Alhaj_ibrahim",
   "start_url": "/index.html", 
   "display": "standalone", 
   "background_color": "#ffffff",
